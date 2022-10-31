@@ -11,6 +11,13 @@
 }
 
 .square {
-	background-color: red;
 	border: 1px black solid;
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
 }
