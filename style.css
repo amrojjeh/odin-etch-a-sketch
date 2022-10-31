@@ -20,4 +20,5 @@
 
 .blue {
 	background-color: blue;
+	transition: .3s;
 }
