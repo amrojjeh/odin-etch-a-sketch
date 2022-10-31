@@ -1,9 +1,22 @@
 // Generates a 720px by 720px grid
 function generateGrid(from_form) {
 	let size = 16; // default size
+	let pError = document.querySelector("#error");
 	if (from_form) {
 		let inputElement = document.querySelector("#size");
-		size = parseInt(inputElement.value); // TODO: check error
+		size = parseInt(inputElement.value);
+		if (isNaN(size)) {
+			pError.innerText = "You must enter a number!";
+			return;
+		}
+		if (size > 100) {
+			pError.innerText = "Size cannot exceed 100";
+			return;
+		}
+		if (size < 1) {
+			pError.innerText = "Size cannot be less than 1";
+			return;
+		}
 		inputElement.setAttribute("placeholder", size);
 	}
 	let divContainer = document.querySelector("#board");
@@ -20,6 +33,7 @@ function generateGrid(from_form) {
 			divContainer.style.gridTemplateRows = `repeat(${size}, ${pixels_per_square}px)`;
 		}
 	}
+	pError.innerText = "";
 }
 
 function paint(e) {

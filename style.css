@@ -61,9 +61,15 @@ input {
 	border: 1px black solid;
 }
 
+#error {
+	color: red;
+	background-color: #1F1F1F;
+	text-align: center;
+	font-size: 1.5em;
+}
+
 .red {
 	background-color: red;
-	color: red;
 	transition: .3s;
 }
 
