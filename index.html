@@ -7,10 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form class="center flex">
-		<input placeholder="16">
+	<form action="javascript:generateGrid(true)" class="center flex">
+		<input id="size" placeholder="16">
 		<input class="btn" type="submit" value="Generate new board" name="">
 	</form>
+	<p class="red" id="error"></p>
 	<div class="center" id="board">
 		<!-- Filled as a 16x16 grid with JS -->
 	</div>
